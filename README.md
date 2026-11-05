@@ -6,7 +6,7 @@ Clawd images, plus a macOS screen saver and a Claude Code plugin I built around 
 | --- | --- |
 | [`images/`](images) | Clawd images |
 | [`claude-glance/`](claude-glance) | **Claude Glance**: a macOS screen saver that shows your Claude Code usage |
-| [`task-band.plugin`](task-band.plugin) | **task-band**: a Claude Code plugin that adds a band above the prompt with a HUD and an animated pixel Clawd |
+| [`task-band.plugin`](task-band.plugin) | **task-band**: a Claude Code plugin that adds a band above the prompt (desktop app only) with a HUD and an animated pixel Clawd |
 
 ## Claude Glance (screen saver)
 
@@ -46,7 +46,9 @@ rm -rf ~/Library/LaunchAgents/local.claude-glance.plist ~/Library/Screen\ Savers
 
 ## task-band (Claude Code plugin)
 
-Version 0.2.2. Adds a band above the Claude Code prompt:
+Version 0.2.3. Adds a band above the Claude Code prompt in the **Claude desktop app only**. Since 0.2.3 the terminal CLI shows no band (task data is still recorded there).
+
+What the band shows:
 
 - **HUD:** model, project and git branch (`*` when there are uncommitted changes), how full the context is, and the 5-hour and 7-day usage limits as green-yellow-red bars with the time until each resets. It also shows this turn's tools (`◐ Edit: auth.ts | ✓ Read ×3`), running subagents and how long they have run, and the current todo (`▸ Fix bug (2/5)`).
 - **Animated Clawd:** walks, blinks and hops, hurries while tools run, cheers when tests pass, and droops when they fail.
@@ -68,4 +70,4 @@ Task data stays on your machine in `~/.config/task-band/`: one CSV per project, 
 
 With no webhook URL set, nothing leaves your machine.
 
-Requires Claude Code 2.1.290 or later (terminal or desktop app). Based on [ponytail](https://github.com/DietrichGebert/ponytail) by Dietrich Gebert (MIT). The HUD's style follows [claude-hud](https://github.com/jarrodwatts/claude-hud).
+Requires Claude Code 2.1.290 or later, in the Claude desktop app. Based on [ponytail](https://github.com/DietrichGebert/ponytail) by Dietrich Gebert (MIT). The HUD's style follows [claude-hud](https://github.com/jarrodwatts/claude-hud).
