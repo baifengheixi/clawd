@@ -7,7 +7,6 @@ Clawd images, plus a macOS screen saver and a Claude Code plugin I built around 
 | [`images/`](images) | Clawd images |
 | [`claude-glance/`](claude-glance) | **Claude Glance**: a macOS screen saver that shows your Claude Code usage |
 | [`plugins/task-band/`](plugins/task-band) | **task-band**: a Claude Code plugin that adds a band above the prompt (desktop app only) with a HUD and an animated pixel Clawd |
-| [`task-band.plugin`](task-band.plugin) | The same plugin packed as one file |
 | [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | Makes this repo a Claude Code plugin marketplace |
 
 ## Claude Glance (screen saver)
