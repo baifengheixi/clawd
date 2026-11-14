@@ -1,0 +1,32 @@
+{
+  "name": "task-band",
+  "version": "0.2.3",
+  "description": "The band above the prompt from ponytail, on its own: task cost, tokens, agent time, code reuse and tests, plus a local board of every task.",
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "ledger": {
+      "type": "boolean",
+      "title": "Task board",
+      "description": "After every turn, write this task's row (cost, turns, agent time, tokens, reuse, tests) to ~/.config/task-band/<project>.csv for the board.",
+      "default": true
+    },
+    "webhookUrl": {
+      "type": "string",
+      "title": "Webhook URL",
+      "description": "Optional: an https address that gets this task's row as JSON after every turn. Empty: nothing leaves this machine.",
+      "default": ""
+    },
+    "webhookToken": {
+      "type": "string",
+      "title": "Webhook token",
+      "sensitive": true,
+      "description": "Optional: sent to the webhook as a Bearer token. Kept in the system keychain."
+    },
+    "sendNames": {
+      "type": "boolean",
+      "title": "Send task names",
+      "default": true,
+      "description": "Send each task's name to the webhook."
+    }
+  }
+}

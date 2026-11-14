@@ -6,7 +6,9 @@ Clawd images, plus a macOS screen saver and a Claude Code plugin I built around 
 | --- | --- |
 | [`images/`](images) | Clawd images |
 | [`claude-glance/`](claude-glance) | **Claude Glance**: a macOS screen saver that shows your Claude Code usage |
-| [`task-band.plugin`](task-band.plugin) | **task-band**: a Claude Code plugin that adds a band above the prompt (desktop app only) with a HUD and an animated pixel Clawd |
+| [`plugins/task-band/`](plugins/task-band) | **task-band**: a Claude Code plugin that adds a band above the prompt (desktop app only) with a HUD and an animated pixel Clawd |
+| [`task-band.plugin`](task-band.plugin) | The same plugin packed as one file |
+| [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) | Makes this repo a Claude Code plugin marketplace |
 
 ## Claude Glance (screen saver)
 
@@ -54,6 +56,18 @@ What the band shows:
 - **Animated Clawd:** walks, blinks and hops, hurries while tools run, cheers when tests pass, and droops when they fail.
 - **Task metrics:** cost (total and last turn), tokens, agent time, how often new code reused existing definitions, callers left without a target by removed functions, and whether tests passed after the last change.
 - **Buttons:** **Details/Compact** expands or shrinks the band. **Copy** copies the task as Markdown.
+
+### Install
+
+This repo is a Claude Code plugin marketplace. In the desktop app, add the marketplace `baifengheixi/clawd`, then install **task-band**. Or in Claude Code:
+
+```
+/plugin marketplace add baifengheixi/clawd
+```
+
+```
+/plugin install task-band@clawd
+```
 
 ### Commands
 
